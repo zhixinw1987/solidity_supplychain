@@ -8,6 +8,7 @@ library LibRegistry {
         mapping (bytes32 => address) funcAddrMap; //function sig => contract address
         mapping (address => bool) contractMap; //address => bool
         address[] contracts;
+        mapping(address => bool) contractsAdded; //contracts address => bool
     }
 
     function getRegistryStorage () internal pure returns (RegistryStorage storage regs) {
